@@ -20,7 +20,7 @@ No comando acima você está criando um container chamado backend utilizando a i
 
 ***11.Para rodar a imagem criado basta rodar o seguinte comando**
 
--   docker run -d --rm --name frontend -p 80:80 --link backend frontend:0.1
+-   docker run -d --rm --name frontend -p 80:80 --link backend frontend:0.0.1
 
 Obs: Cria a imagem chamada frontend disponibilizando para porta 80 interna e externa.
 
