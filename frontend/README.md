@@ -1,53 +1,52 @@
 # Sistemas para Internet - SecDevOps
 
-***nac:*** Criação de uma aplicação no formato "CRUD" executada em containers com base na linguagem "PHP" e no banco de dados "MySQL";
+***nac:***
+Criação de uma aplicação no formato "CRUD" executada em containers
+com base na linguagem "PHP" e no banco de dados "MySQL";
 
 ---
 
 ***Importante:***
 
-Nome:Andre Cainelli Tolentino.
+-   RM:78710
+-   Nome:Andre Cainelli Tolentino.
 
-RM:78710
 
-***1.Instale o docker em sua máquina:***
+***1.INSTALAR DOCKER EM SUA MÁQUINA:***
 
-https://docs.docker.com/docker-for-windows/install/
+-   https://docs.docker.com/docker-for-windows/install/
 
-***2.Execute-o e dê um fork no repositório do github:***
+***2.EXECUTAR E DAR UM FORK NO REPOSITÓRIO ABAIXO:***
 
 https://github.com/fiapsecdevops/php-sample-app/
 
-***3.No diretório de sua preferência execute o seguinte comando:***
+***3.NO DIRETÓRIO EXECUTE O SEGUINTE COMANDON:***
 
-git clone “O seu repositorio do projeto”
+-   git clone “O seu repositorio do projeto”
 
-Obs: o repositorio é aquele que você deu fork, o meu no caso é:
+-   Obs: o repositorio é aquele que você deu fork, o meu no caso é:
 
-https://github.com/andrecainelli/php-sample-app/
+-   https://github.com/andrecainelli/php-sample-app/
 
-***4.Ele criará uma pasta chamada:***
+***4.VERIFIQUE SE A PASTA ABAIXO FOI CRIADA:***
 
-php-sample-app/
+-   php-sample-app/
 
-Entre dentro desta pasta em seguida entre dentro da pasta backend dentro do mesmo.
+-   Na pasta backend adicionar um arquivo chamado Dockerfile
 
-Adicione um arquivo chamado Dockerfile.
-
-***5.Adicione estas linhas dentro do arquivo:***
+***5.ADICIONE AS SEGUINTES LINHAS DENTRO DESSE ARQUIVO:***
 
 FROM mysql:5.7
 
 COPY ./demo.sql /docker-entrypoint-initdb.d
 
-Obs: Os comandos acima significam que ele está adicionando uma imagem do mysql na versão 5.7 no seu docker.
+Obs: Adicionando uma imagem do mysql na versão 5.7 no seu docker.
 
-***6.Em seguida volte para o diretório oho-sample-app e entre na pasta frontend:***
+***6.VOLTE PARA O DIRETÓRIO PHP-SAMPLE-APP E ENTRE NA PASTA FRONTEND:***
 
-Dentro criei um arquivo chamado Dockerfile
-adicionando os seguintes comandos:
+-   Na pasta frontend adicionar um arquivo chamado Dockerfile
 
-FROM php:7.2-apache
+-   FROM php:7.2-apache
 
 # Enable mysqli to connect to databse
 RUN docker-php-ext-install mysqli
